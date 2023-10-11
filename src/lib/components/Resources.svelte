@@ -7,7 +7,7 @@
     <h2>resources://</h2>
     <p>Further reading on this topic.</p>
   </div>
-  {@html resources.text}
+  {@html resources}
 </article>
 
 <style>

@@ -53,9 +53,10 @@ const content = (
         const markdown = marked.parse(content);
         const examples = markdown
           .split("<hr>")
-          .map((block) => {
+          .map((block, index) => {
             const $ = cheerio.load(block);
 
+            const isIntro = index === 0;
             const isResources = $.html().includes("<h2>Resources</h2>");
 
             const $title = $("h2");
@@ -111,15 +112,40 @@ const content = (
 
             const text = $("body").html().replace("\n\n", "\n");
 
-            return { title, text, code, isResources };
+            return { title, text, code, isIntro, isResources };
           })
-          .filter((block) => block);
+          .filter((example) => example);
 
         if (!examples.length) {
           return null;
         }
 
-        return { hash, title, section, slug, url, path, examples };
+        const page = {
+          hash,
+          title,
+          section,
+          slug,
+          url,
+          path,
+          intro: null,
+          examples: [],
+          resources: null,
+        };
+
+        return examples.reduce((page, example) => {
+          if (example.isIntro) {
+            page.intro = example.text;
+          } else if (example.isResources) {
+            page.resources = example.text;
+          } else {
+            delete example.isIntro;
+            delete example.isResources;
+
+            page.examples.push(example);
+          }
+
+          return page;
+        }, page);
       }),
   )
 ).filter((page) => page);

@@ -5,10 +5,6 @@
   import Pagination from "../../lib/components/Pagination.svelte";
 
   export let data;
-
-  $: header = data.page.examples[0];
-  $: examples = data.page.examples.filter((example, index) => index !== 0 && !example.isResources);
-  $: resources = data.page.examples.find((example) => example.isResources);
 </script>
 
 <svelte:head>
@@ -22,15 +18,17 @@
   <h1>
     <a href="/">{data.page.section} by Example</a>: {data.page.title}
   </h1>
-  {@html header.text}
+  {#if data.page.intro}
+    {@html data.page.intro}
+  {/if}
 </Header>
 
-{#each examples as example}
+{#each data.page.examples as example}
   <Example {example} />
 {/each}
 
 <Pagination nextPage={data.nextPage} previousPage={data.previousPage} />
 
-{#if resources}
-  <Resources {resources} />
+{#if data.page.resources}
+  <Resources resources={data.page.resources} />
 {/if}
