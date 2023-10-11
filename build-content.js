@@ -13,9 +13,11 @@ function highlight(contents, lang) {
   return shiki.codeToHtml(contents, { lang, theme: THEME });
 }
 
-const existing = JSON.parse(
-  await fs.readFile("./src/lib/content.json", "utf-8"),
-);
+let existing = null;
+
+try {
+  existing = JSON.parse(await fs.readFile("./src/lib/content.json", "utf-8"));
+} catch (error) {}
 
 const content = (
   await Promise.all(
@@ -30,7 +32,7 @@ const content = (
         }
 
         const hash = Buffer.from(content).toString("base64").substring(-48);
-        const cached = existing.find((page) => page.hash === hash);
+        const cached = existing?.find((page) => page.hash === hash);
 
         if (cached) {
           return cached;
