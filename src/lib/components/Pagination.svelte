@@ -17,9 +17,8 @@
     {/if}
     {#if nextPage}
       <li class="next">
-        Next: <a
-          href={nextPage.url}
-          use:shortcut={{ code: "ArrowRight" }}>{nextPage.title}</a
+        Next: <a href={nextPage.url} use:shortcut={{ code: "ArrowRight" }}
+          >{nextPage.title}</a
         >
       </li>
     {/if}

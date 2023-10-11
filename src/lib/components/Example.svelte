@@ -3,11 +3,14 @@
 
   $: code = $small
     ? example.code.map((block) => {
-      return {
-        ...block,
-        code: block.code.replace(/(\n<span class="line"><\/span>){2,}/g, '$1'),
-      };
-    })
+        return {
+          ...block,
+          code: block.code.replace(
+            /(\n<span class="line"><\/span>){2,}/g,
+            "$1",
+          ),
+        };
+      })
     : example.code;
 
   export let example;

@@ -10,10 +10,12 @@
     <p>
       By <a href="https://sebastiandedeyne.com">Sebastian De Deyne</a> at
       <a href="https://spatie.be">SPATIE</a>
-      <br class="sm-only">
+      <br class="sm-only" />
       <span class="lg-only">|</span>
       Built with <a href="https://kit.svelte.dev/">SvelteKit</a> |
-      <a href="https://github.com/sebastiandedeyne/sveltebyexample.com">Source</a>
+      <a href="https://github.com/sebastiandedeyne/sveltebyexample.com"
+        >Source</a
+      >
     </p>
   </footer>
 </div>

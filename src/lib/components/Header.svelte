@@ -2,7 +2,7 @@
   <a href="/">
     <img src="/svelte.svg" alt="Svelte logo" />
   </a>
-  <slot></slot>
+  <slot />
 </header>
 
 <style>

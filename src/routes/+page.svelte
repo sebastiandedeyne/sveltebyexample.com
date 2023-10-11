@@ -19,9 +19,8 @@
 <Header>
   <h1>Svelte by Example</h1>
   <p>
-    <a href="https://svelte.dev/">Svelte</a> is a frontend framework &
-    compiler to generate minimal, optimized JavaScript code for web
-    applications. <br />
+    <a href="https://svelte.dev/">Svelte</a> is a frontend framework & compiler
+    to generate minimal, optimized JavaScript code for web applications. <br />
     <a href="https://kit.svelte.dev/">SvelteKit</a> is a meta-framework to build
     full-stack web applications with Svelte.
   </p>
