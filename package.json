@@ -5,7 +5,7 @@
 	"scripts": {
 		"dev": "concurrently \"npm run dev:content\" \"vite dev\" --names=content,vite --hide=0 --prefix=\"​\"",
 		"dev:content": "chokidar \"content/*.md\" \"build-content.js\" -c \"npm run build:content\" --initial --silent",
-		"build": "vite build",
+		"build": "npm run build:content && vite build",
 		"build:content": "node build-content.js",
 		"preview": "vite preview",
 		"format": "prettier **/*.{html,js,json,svelte,md} --write"
