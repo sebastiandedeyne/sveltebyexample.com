@@ -29,7 +29,8 @@
 
   main {
     flex: 1;
-    max-width: min(100%, calc(800px + 2rem));
+    width: 100%;
+    max-width: calc(800px + 2rem);
     padding: 0 var(--spacing);
     margin: calc(var(--spacing) * 2) auto 0;
   }
