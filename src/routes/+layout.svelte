@@ -9,7 +9,7 @@
   <footer>
     <p>
       By <a href="https://sebastiandedeyne.com">Sebastian De Deyne</a> at
-      <a href="https://spatie.be">SPATIE</a>
+      <a href="https://spatie.be/?utm_campaign=footer-link&utm_source=svelte-by-example">SPATIE</a>
       <br class="sm-only" />
       <span class="lg-only">|</span>
       Built with <a href="https://kit.svelte.dev/">SvelteKit</a> |
