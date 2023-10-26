@@ -6,6 +6,11 @@
   import Pagination from "../../lib/components/Pagination.svelte";
 
   export let data;
+
+  /** We can't use location.ref here since it will only run on the browser */
+  let metaImageURL = new URL(PUBLIC_BASE_URL);
+  metaImageURL.pathname = "/api/og-image";
+  metaImageURL.searchParams.set("title", data.page.title);
 </script>
 
 <svelte:head>
@@ -14,18 +19,12 @@
     {data.page.title}
   </title>
 
-  <meta
-    property="og:image"
-    content={`${PUBLIC_BASE_URL}/api/og-image?title="${data.page.title}"`}
-  />
+  <meta property="og:image" content={metaImageURL.toString()} />
 
   <meta property="og:image:width" content="800" />
   <meta property="og:image:height" content="400" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta
-    name="twitter:image"
-    content={`${PUBLIC_BASE_URL}/api/og-image?title="${data.page.title}"`}
-  />
+  <meta name="twitter:image" content={metaImageURL.toString()} />
   <meta
     name="twitter:title"
     content={`${data.page.section} by Example: ${data.page.title}`}
