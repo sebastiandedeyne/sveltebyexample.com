@@ -21,6 +21,15 @@
 
   <meta property="og:image:width" content="800" />
   <meta property="og:image:height" content="400" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta
+    name="twitter:image"
+    content={`${PUBLIC_BASE_URL}/api/og-image?title=${data.page.title}`}
+  />
+  <meta
+    name="twitter:title"
+    content={`${data.page.section} by Example: ${data.page.title}`}
+  />
 </svelte:head>
 
 <Header>
