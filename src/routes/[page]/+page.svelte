@@ -16,7 +16,7 @@
 
   <meta
     property="og:image"
-    content={`${PUBLIC_BASE_URL}/api/og-image?title=${data.page.title}`}
+    content={`${PUBLIC_BASE_URL}/api/og-image?title="${data.page.title}"`}
   />
 
   <meta property="og:image:width" content="800" />
@@ -24,7 +24,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta
     name="twitter:image"
-    content={`${PUBLIC_BASE_URL}/api/og-image?title=${data.page.title}`}
+    content={`${PUBLIC_BASE_URL}/api/og-image?title="${data.page.title}"`}
   />
   <meta
     name="twitter:title"
