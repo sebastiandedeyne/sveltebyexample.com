@@ -1,4 +1,5 @@
 <script>
+  import { PUBLIC_BASE_URL } from "$env/static/public";
   import Header from "../../lib/components/Header.svelte";
   import Example from "../../lib/components/Example.svelte";
   import Resources from "../../lib/components/Resources.svelte";
@@ -15,7 +16,7 @@
 
   <meta
     property="og:image"
-    content={`https://sveltebyexample-com/api/og-image?title=${data.page.title}`}
+    content={`${PUBLIC_BASE_URL}/api/og-image?title=${data.page.title}`}
   />
 
   <meta property="og:image:width" content="800" />
