@@ -25,5 +25,9 @@
 		"svelte": "^4.0.5",
 		"vite": "^4.4.2"
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"@vercel/og": "^0.5.20",
+		"satori-html": "^0.3.2"
+	}
 }

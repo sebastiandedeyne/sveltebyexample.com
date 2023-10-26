@@ -12,6 +12,14 @@
     {data.page.section} by Example:
     {data.page.title}
   </title>
+
+  <meta
+    property="og:image"
+    content={`https://sveltebyexample-com/api/og-image?title=${data.page.title}`}
+  />
+
+  <meta property="og:image:width" content="800" />
+  <meta property="og:image:height" content="400" />
 </svelte:head>
 
 <Header>
