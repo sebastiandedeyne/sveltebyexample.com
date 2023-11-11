@@ -1,29 +1,33 @@
 {
-	"name": "sveltebyexample.com",
-	"version": "0.0.1",
-	"private": true,
-	"scripts": {
-		"dev": "concurrently \"npm run dev:content\" \"vite dev\" --names=content,vite --hide=0 --prefix=\"​\"",
-		"dev:content": "chokidar \"content/*.md\" \"build-content.js\" -c \"npm run build:content\" --initial --silent",
-		"build": "npm run build:content && vite build",
-		"build:content": "node build-content.js",
-		"preview": "vite preview",
-		"format": "prettier **/*.{html,js,json,svelte,md} --write"
-	},
-	"devDependencies": {
-		"@sveltejs/adapter-auto": "^2.0.0",
-		"@sveltejs/adapter-static": "^2.0.3",
-		"@sveltejs/kit": "^1.20.4",
-		"@types/node": "^20.5.6",
-		"cheerio": "^1.0.0-rc.12",
-		"chokidar-cli": "^3.0.0",
-		"concurrently": "^8.2.1",
-		"marked": "^7.0.4",
-		"prettier": "^3.0.3",
-		"prettier-plugin-svelte": "^3.0.3",
-		"shiki": "^0.14.4",
-		"svelte": "^4.0.5",
-		"vite": "^4.4.2"
-	},
-	"type": "module"
+  "name": "sveltebyexample.com",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run dev:content\" \"vite dev\" --names=content,vite --hide=0 --prefix=\"​\"",
+    "dev:content": "chokidar \"content/*.md\" \"build-content.js\" -c \"npm run build:content\" --initial --silent",
+    "build": "npm run build:content && build:og && vite build",
+    "build:content": "node build-content.js",
+    "build:og": "node scripts/build-og.js",
+    "preview": "vite preview",
+    "format": "prettier **/*.{html,js,json,svelte,md} --write"
+  },
+  "devDependencies": {
+    "@resvg/resvg-js": "^2.6.0",
+    "@sveltejs/adapter-auto": "^2.0.0",
+    "@sveltejs/adapter-static": "^2.0.3",
+    "@sveltejs/kit": "^1.20.4",
+    "@types/node": "^20.5.6",
+    "cheerio": "^1.0.0-rc.12",
+    "chokidar-cli": "^3.0.0",
+    "concurrently": "^8.2.1",
+    "marked": "^7.0.4",
+    "prettier": "^3.0.3",
+    "prettier-plugin-svelte": "^3.0.3",
+    "satori": "^0.10.9",
+    "satori-html": "^0.3.2",
+    "shiki": "^0.14.4",
+    "svelte": "^4.0.5",
+    "vite": "^4.4.2"
+  },
+  "type": "module"
 }
