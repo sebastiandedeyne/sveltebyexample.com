@@ -23,6 +23,14 @@
   --spacing: 0.5rem;
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --gray-bg: #343434;
+    --gray-border: #7d8590;
+    --orange: #ff3e00;
+  }
+}
+
 @media (min-width: 640px) {
   :root {
     --text-base: 19px;
@@ -33,6 +41,7 @@
 
 html {
   font-size: var(--baseline);
+  color-scheme: dark light;
 }
 
 body {
@@ -75,7 +84,6 @@ kbd {
 pre,
 code:not(pre > code),
 kbd {
-  background-color: var(--gray-bg) !important;
   border: 1px solid var(--gray-border);
   border-radius: 2px;
   padding: 0 0.2em;
@@ -89,6 +97,7 @@ pre {
 
 code:not(pre > code),
 kbd {
+  background-color: var(--gray-bg) !important;
   font-size: var(--text-inline-code);
   white-space: nowrap;
 }
