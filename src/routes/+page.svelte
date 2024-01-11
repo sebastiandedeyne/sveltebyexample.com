@@ -26,7 +26,7 @@
   </p>
   <p>
     <em>Svelte by Example</em> is a succinct, gentle introduction to Svelte &
-    SvelteKit to peak your curiosity. If you want to dive deeper, we recommend
+    SvelteKit to pique your curiosity. If you want to dive deeper, we recommend
     reading through the Svelte
     <a href="https://learn.svelte.dev/tutorial/welcome-to-svelte">tutorial</a>
     & <a href="https://svelte.dev/docs/introduction">docs</a>.
