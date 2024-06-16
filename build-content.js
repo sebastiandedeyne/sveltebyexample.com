@@ -3,7 +3,7 @@ import * as cheerio from "cheerio";
 import { promises as fs } from "fs";
 import { getHighlighter } from "shiki";
 
-const THEME = "github-light";
+const THEME = "github-dark";
 
 const shiki = await getHighlighter({
   theme: THEME,
